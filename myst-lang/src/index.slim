@@ -1,0 +1,34 @@
+doctype html
+
+head
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title #{{title}}
+  link(rel="stylesheet" href="normalize.css")
+  link(rel="stylesheet" href="style.css")
+
+.stickybar
+  nav.navbar
+    .info
+      .name
+        span #{{name}}
+      .version
+        span #{{version}}
+    .stickylogo
+      img src="./assets/myst-logo.png" width="100%" height="100%"
+    ul.links
+      a
+        span Get Started
+      a
+        span Community
+      a
+        span Docs
+      a
+        span Github
+  .hl.breaker
+ 
+main
+  .container
+    .box.statement #{{statement}}
+    code.example #{{example}}
+    .description.code-style #{{description}}
