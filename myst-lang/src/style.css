@@ -170,11 +170,6 @@ code {
     padding: 0;
   }
 }
-@media screen and (max-width: 400px) {
-  .stickybar nav.navbar .links {
-    font-size: 3vw;
-  }
-}
 .hl.breaker {
   background: var(--header-color);
   z-index: -1;
