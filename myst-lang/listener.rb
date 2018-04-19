@@ -50,6 +50,7 @@ render_slim('./src/index.slim')
 
 listener = Listen.to(location, only: Regexp.new("#{only}")) do |modified, added, removed|
   modified.each do |file|
+    @variables = eval File.read('./src/variables.rb')
     render_slim(file)
   end
   puts "  watching ".colorize(32) << "#{location}/#{only}"

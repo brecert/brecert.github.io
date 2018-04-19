@@ -48,11 +48,17 @@
     --navbar-width: 93.5vw;
   }
 }
+@media screen and (min-width: 920px) {
+  :root {
+    --navbar-width: 920px;
+  }
+}
 ::selection {
   background: rgba(133,133,133,0.5);
 }
 html {
   font-family: var(--font-sans);
+  line-height: 1.7em;
 }
 a {
   color: currentColor;
@@ -86,28 +92,17 @@ code {
 .stickylogo {
   position: relative;
   flex: 1;
-}
-@media screen and (min-width: 900px) {
-  .stickylogo {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 10px;
-  }
+  width: 0;
+  height: 0;
 }
 @media screen and (max-width: 650px) {
-  .stickylogo {
-    width: 0;
-    height: 0;
-    padding-left: 1vw;
-  }
 }
-.stickylogo img {
+img {
   width: 3em;
   height: auto;
 }
 @media screen and (max-width: 650px) {
-  .stickylogo img {
+  img {
     width: 3.9vw;
     height: auto;
   }
@@ -186,7 +181,7 @@ main .container .box {
   grid-area: statement;
   font-size: 20px;
 }
-main .container code.example {
+main .container .example {
   grid-area: example;
 }
 main .container .description {

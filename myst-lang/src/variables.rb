@@ -7,7 +7,7 @@ name = 'Myst'
   title: "#{name} - A structured, dynamic, general-purpose language",
 
   statement: 'A language for clarity from the start, flexibility when you need it, and efficiency where it matters.',
-  example: 'IO.puts "Hello World!"',
+  example: "IO.puts('Hello World!')",
 
   description: """markdown:
   Myst is a new programming language with the goal of bridging flexibility and practicality. By directly addressing common traps in modern dynamic programming, Myst provides users the ability to work quickly and easily with the power to write controlled, highly-structured code.

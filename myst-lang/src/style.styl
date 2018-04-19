@@ -2,6 +2,7 @@
 
 max_width_medium = 650px
 max_width_small = 400px
+max_width_big = 920px
 
 size(width, height)
   width: width
@@ -55,6 +56,8 @@ size(width, height)
   --navbar-width: 90vw
   @media screen and (max-width: max_width_medium)
     --navbar-width: 93.5vw
+  @media screen and (min-width: max_width_big)
+    --navbar-width: max_width_big
     
 // TODO: Process to work for all bowsers.
 ::selection
@@ -62,6 +65,7 @@ size(width, height)
     
 html
   font-family var(--font-sans)
+  line-height: 1.7em
     
 a
   color currentColor
@@ -93,13 +97,13 @@ code
 .stickylogo
   position relative
   flex 1
-  @media screen and (min-width: 900px)
-    position fixed
-    left 50%
-    transform translateX(-50%)
-    top 10px
+  size 0 0
+//  @media screen and (min-width: 900px)
+//    position fixed
+//    left 50%
+//    transform translateX(-50%)
+//    top 10px
   @media screen and (max-width: max_width_medium)
-    size 0 0
     padding-left 1vw
   img
     size 3em auto
@@ -165,7 +169,7 @@ main
       padding-right 20px
       grid-area: statement
       font-size: 20px
-    code.example
+    .example 
       grid-area: example
     .description
       grid-area: description
