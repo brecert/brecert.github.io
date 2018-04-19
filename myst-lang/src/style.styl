@@ -112,7 +112,8 @@ code
 
 .stickybar
   position sticky
-  top -14px
+  top -15px
+  background-color: rgba(#f, 0.9)
   z-index 100
   nav.navbar
     position relative
@@ -123,10 +124,10 @@ code
     line-height: 1
     width calc(var(--navbar-width) - 2.5vw)
     .info
+      padding-bottom 15px
       float left
       .name
         color: var(--dark-blue)
-        height 0.5em
         font-size 3em
         @media screen and (max-width: max_width_medium)
           font-size 4vw
@@ -143,7 +144,7 @@ code
       color: var(--text-color)
       display inline-block
       margin 0
-      margin-top auto
+      margin-top 15px
       font-size: 1.25em
       font-weight: 379
       a
