@@ -1,5 +1,56 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>aaa</title>
-</head>
+  <head>
+    <title>&lt;brecert&gt;</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/basic-card.css">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: "Helvetica Neue", "Roboto", sans-serif;
+        
+        /* see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars */
+        scrollbar-color: #666 transparent;
+        scrollbar-width: thin;
+      }
+      
+      .basic-card .basic-card-image {
+        overflow: hidden;
+        max-height: 512px;
+      }
+      
+      @media screen and (min-width: 400px) {
+        .basic-card {
+          margin: auto;
+          margin-top: 15vh;
+          width: 300px;
+
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+          border-radius: 10px;
+          border: 3px solid rgba(50, 50, 50, 0.12);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="basic-card" style="--card-color: #757;">
+      <div class="basic-card-image">
+        <img src="https://avatars1.githubusercontent.com/u/11599528?s=460&v=4">
+      </div>
+      <div class="basic-card-hr"></div>
+      <div class="basic-card-header">
+        <div class="basic-card-title">Brecert</div>
+        <div class="basic-card-subtitle">ts, js, py, go, rs</div>
+      </div>
+      <div class="basic-card-content">
+        <div class="basic-card-description">I'd rather not talk much about myself.
+          
+        this card was made using <a href="https://github.com/Brecert/basic-card.css">basic-card.css</a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
