@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>&lt;brecert&gt;</title>
+    <title>brecert</title>
 
     <meta property="og:title" content="brecert" />
     <meta property="og:url" content="https://bree.ml" />
@@ -12,21 +12,18 @@
 
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
     <style type="text/css">
-      * {
-        box-sizing: border-box;
-      }
       html {
         font-family: "Helvetica Neue", "Roboto", sans-serif;
 
         /* see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars */
         scrollbar-color: #666 transparent;
         scrollbar-width: thin;
-        
+
         display: flex;
         justify-content: center;
-        
+
         height: 100vh;
-        
+
         background-color: #0c0c0c;
         color: #f0f0f0
       }
@@ -34,7 +31,7 @@
       html * {
         margin: auto;
       }
-      
+
       .user-info {
         display: grid;
         grid-template: 
@@ -42,24 +39,28 @@
           "avatar user-languages" 1fr / 
           auto auto;
       }
-      
+
       .avatar {
         grid-area: avatar;
       }
-      
+
       .avatar img, .avatar {
-        width: 50px;
-        height: 50px
+        width: 10vmin;
+        height: 10vmin
       }
-      
+
       .user-name {
         grid-area: user-name;
       }
-      
+
       .user-languages {
         grid-area: user-languages;
       }
       
+      .basic-card {
+        font-size: 3vmin
+      }
+
       .basic-card-image {
         border-radius: 100%;
         overflow: hidden;
