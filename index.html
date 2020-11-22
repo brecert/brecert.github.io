@@ -4,85 +4,221 @@
     <title>brecert</title>
 
     <meta property="og:title" content="brecert" />
-    <meta property="og:url" content="https://bree.ml" />
-    <meta property="og:image" content="https://avatars1.githubusercontent.com/u/11599528?s=256&v=4" />
+    <meta property="og:url" content="https://bree.dev" />
+    <meta
+      property="og:image"
+      content="https://avatars1.githubusercontent.com/u/11599528?s=256&v=4"
+    />
     <meta property="og:image:alt" content="brecert" />
-    <meta property="og:description" content="I'd rather not talk much about myself" />
+    <meta property="og:description" content="Hello!" />
     <meta property="og:site_name" content="ts, js, py, go, rs" />
 
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
     <style type="text/css">
-      html {
-        font-family: "Helvetica Neue", "Roboto", sans-serif;
-
-        /* see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars */
-        scrollbar-color: #666 transparent;
-        scrollbar-width: thin;
-
-        display: flex;
-        justify-content: center;
-
-        height: 100vh;
-
-        background-color: #0c0c0c;
-        color: #f0f0f0
-      }
-      
-      html * {
-        margin: auto;
+      :root {
+        --color-blue: #0072c6;
+        --font-normal: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+        --font-light: "Segoe UI Light", var(--font-normal);
+        --font-semi-light: "Segoe UI Semilight", var(--font-normal);
       }
 
-      .user-info {
+      body {
+        overflow: auto;
+        max-width: 830px;
+
+        background-color: #fff;
+        color: #444;
+
+        font-family: var(--font-normal);
+        font-size: 13px;
+
+        margin: 0 auto;
+      }
+
+      @media screen and (max-width: 930px) {
+        body {
+          margin: 0 5vh;
+        }
+      }
+
+      header {
+        margin: 118px 0px 16px;
+      }
+
+      footer {
+        margin: 16px 0px 118px;
+      }
+
+      h1 {
+        font-family: var(--font-light);
+        font-size: 2.77em;
+        font-weight: 200;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a,
+      .text-blue {
+        color: var(--color-blue);
+      }
+
+      .text-lg {
+        font-size: 1.46em;
+        font-family: var(--font-semi-light);
+      }
+
+      .icon {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .right {
+        float: right;
+      }
+
+      .grid {
         display: grid;
-        grid-template: 
-          "avatar user-name" 1fr
-          "avatar user-languages" 1fr / 
-          auto auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
       }
 
-      .avatar {
-        grid-area: avatar;
-      }
-
-      .avatar img, .avatar {
-        width: 10vmin;
-        height: 10vmin
-      }
-
-      .user-name {
-        grid-area: user-name;
-      }
-
-      .user-languages {
-        grid-area: user-languages;
-      }
-      
-      .basic-card {
-        font-size: 3vmin
-      }
-
-      .basic-card-image {
-        border-radius: 100%;
-        overflow: hidden;
+      .pad {
+        padding: 1rem;
       }
     </style>
   </head>
   <body>
-    <div class="basic-card" style="--card-color: #757;">
-      <div class="basic-card-hr"></div>
-      <div class="basic-card-header user-info">
-        <div class="basic-card-image avatar">
-          <img src="https://avatars1.githubusercontent.com/u/11599528?s=256&v=4">
+    <header>
+      <h1 style="display: flex">
+        I'm Bree.
+        <div style="display: flex; gap: 1rem; margin-left: auto">
+          <a href="//github.com/brecert/" rel="nofollow" target="_blank"
+            ><img
+              class="icon"
+              title="github"
+              src="https://api.iconify.design/simple-icons:github.svg"
+              width="48"
+              height="48"
+          /></a>
         </div>
-        <div class="basic-card-title user-name">Brecert</div>
-        <div class="basic-card-subtitle user-languages">ts, js, py, go, rs</div>
-      </div>
-      <br>
-      <div class="basic-card-content">
-        <div class="basic-card-description">
-          <p>I'd rather not talk much about myself</p>
+      </h1>
+      <span title="lanuage I use">js, rs, ts, py, go</span>
+    </header>
+    <main>
+      <p class="text-lg">
+        Hello! I'm bree. I usually program in javascript and rust...
+      </p>
+      <details>
+        <summary>
+          I'm helping create and design a programming language called
+          <a
+            href="https://github.com/snowflake-language/snowflake"
+            rel="nofollow"
+            target="_blank"
+            >snowflake</a
+          >
+        </summary>
+        <blockquote>
+          <p>
+            Currently snowflake is the idea and concept to apply
+            <a
+              href="https://en.wikipedia.org/wiki/Category_theory"
+              rel="nofollow"
+              target="_blank"
+              >Category theory</a
+            >,
+            <a
+              href="https://en.wikipedia.org/wiki/Higher_category_theory"
+              rel="nofollow"
+              target="_blank"
+              >Higher category theory</a
+            >,
+            <a
+              href="https://en.wikipedia.org/wiki/Set_theory"
+              rel="nofollow"
+              target="_blank"
+              >Set theory</a
+            >, and various "newer" programming concepts in general such as
+            algerbraic effects, and various "older" programming concepts such as
+            lambda calculus, self types, and different ideas from proof
+            checkers.
+          </p>
+          <p>
+            I generally help out with the project by suggesting ideas, and
+            researching various programming languages, and seeing how they do
+            things and how to learn from that.
+          </p>
+          <p>
+            In the past for a language jam, I implemented the parser and ast
+            format for an earlier prototype of the language.
+          </p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>
+          I will occasionally help out with a project called
+          <a
+            href="https://nertivia.supertiger.tk/"
+            rel="nofollow"
+            target="_blank"
+            >nertivia</a
+          >
+        </summary>
+        <blockquote>
+          <p>Nertivia is a free open source chat client and server.</p>
+          <p>
+            I generally help by providing guidance on certain ideas and
+            adding/implementing harder clientside additions such as adding
+            markdown support, and then later a custom markup format.
+          </p>
+          <!-- todo: add links to rust markup repository once created -->
+          <p>
+            Currently I'm working on writing a new markup language parser in
+            rust for performance and reusability, as well as a specification for
+            the parser, and a generic entity format that can later be used with
+            bots.
+          </p>
+        </blockquote>
+      </details>
+      <!-- todo: update to a project I am happy with once I make one -->
+      <details>
+        <summary>
+          I'm not particularly happy with any of my own projects right now...
+        </summary>
+        <blockquote>:(</blockquote>
+      </details>
+      <details>
+        <summary> I enjoy doodling and marking art occasionally</summary>
+        <div class="grid pad">
+          <!-- todo: use something other than imgur -->
+          <img src="https://i.imgur.com/RBTJD5I.png" />
+          <img src="https://i.imgur.com/HabZxTA.png" />
+          <img src="https://i.imgur.com/5RiFZ4i.png" />
+          <img src="https://i.imgur.com/JOzOAbX.png" />
+          <img src="https://i.imgur.com/NGkoaif.png" />
+          <img src="https://i.imgur.com/MlH8PEM.png" />
         </div>
-      </div>
-    </div>
+      </details>
+    </main>
+    <footer>
+      contact:
+      <a
+        href="https://play.rust-lang.org/?gist=a733f2de776759d09fcb292e76f23e1e"
+        rel="nofollow"
+        target="_blank"
+        ><code>format!("{}@outlook.com", "brecert")</code></a
+      >
+    </footer>
   </body>
 </html>
