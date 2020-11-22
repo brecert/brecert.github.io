@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
     <title>brecert</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta property="og:title" content="brecert" />
     <meta property="og:url" content="https://bree.dev" />
@@ -41,17 +43,26 @@
       }
 
       header {
-        margin: 118px 0px 16px;
+        margin: 7.5rem 0px 1rem;
       }
 
       footer {
-        margin: 16px 0px 118px;
+        margin: 2rem 0px 1rem;
+        font-size: 0.75rem;
       }
 
       h1 {
         font-family: var(--font-light);
         font-size: 2.77em;
         font-weight: 200;
+      }
+
+      summary {
+        padding: 5px 0;
+      }
+
+      section {
+        padding: 1rem;
       }
 
       img {
@@ -92,10 +103,6 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 15px;
       }
-
-      .pad {
-        padding: 1rem;
-      }
     </style>
   </head>
   <body>
@@ -103,7 +110,10 @@
       <h1 style="display: flex">
         I'm Bree.
         <div style="display: flex; gap: 1rem; margin-left: auto">
-          <a href="//github.com/brecert/" rel="nofollow" target="_blank"
+          <a
+            href="//github.com/brecert/"
+            rel="noreferrer nofollow"
+            target="_blank"
             ><img
               class="icon"
               title="github"
@@ -124,29 +134,29 @@
           I'm helping create and design a programming language called
           <a
             href="https://github.com/snowflake-language/snowflake"
-            rel="nofollow"
+            rel="noreferrer nofollow"
             target="_blank"
             >snowflake</a
           >
         </summary>
-        <blockquote>
+        <section>
           <p>
             Currently snowflake is the idea and concept to apply
             <a
               href="https://en.wikipedia.org/wiki/Category_theory"
-              rel="nofollow"
+              rel="noreferrer nofollow"
               target="_blank"
               >Category theory</a
             >,
             <a
               href="https://en.wikipedia.org/wiki/Higher_category_theory"
-              rel="nofollow"
+              rel="noreferrer nofollow"
               target="_blank"
               >Higher category theory</a
             >,
             <a
               href="https://en.wikipedia.org/wiki/Set_theory"
-              rel="nofollow"
+              rel="noreferrer nofollow"
               target="_blank"
               >Set theory</a
             >, and various "newer" programming concepts in general such as
@@ -163,19 +173,19 @@
             In the past for a language jam, I implemented the parser and ast
             format for an earlier prototype of the language.
           </p>
-        </blockquote>
+        </section>
       </details>
       <details>
         <summary>
           I will occasionally help out with a project called
           <a
             href="https://nertivia.supertiger.tk/"
-            rel="nofollow"
+            rel="noreferrer nofollow"
             target="_blank"
             >nertivia</a
           >
         </summary>
-        <blockquote>
+        <section>
           <p>Nertivia is a free open source chat client and server.</p>
           <p>
             I generally help by providing guidance on certain ideas and
@@ -189,33 +199,69 @@
             the parser, and a generic entity format that can later be used with
             bots.
           </p>
-        </blockquote>
+        </section>
       </details>
       <!-- todo: update to a project I am happy with once I make one -->
       <details>
         <summary>
           I'm not particularly happy with any of my own projects right now...
         </summary>
-        <blockquote>:(</blockquote>
+        <section>:(</section>
       </details>
       <details>
-        <summary> I enjoy doodling and marking art occasionally</summary>
-        <div class="grid pad">
+        <summary>I enjoy doodling and marking art occasionally</summary>
+        <section class="grid pad">
           <!-- todo: use something other than imgur -->
-          <img src="https://i.imgur.com/RBTJD5I.png" />
-          <img src="https://i.imgur.com/HabZxTA.png" />
-          <img src="https://i.imgur.com/5RiFZ4i.png" />
-          <img src="https://i.imgur.com/JOzOAbX.png" />
-          <img src="https://i.imgur.com/NGkoaif.png" />
-          <img src="https://i.imgur.com/MlH8PEM.png" />
-        </div>
+          <img
+            src="https://i.imgur.com/RBTJD5I.png"
+            alt="a drawing of a person looking into space with a glitchy telescope"
+            width="768"
+            height="768"
+            loading="lazy"
+          />
+          <img
+            src="https://i.imgur.com/HabZxTA.png"
+            alt="a drawing of a red haired person looking off to the side with an otherworldly background"
+            width="768"
+            height="768"
+            loading="lazy"
+          />
+          <img
+            src="https://i.imgur.com/5RiFZ4i.png"
+            alt="a paining of a purple forest"
+            width="768"
+            height="768"
+            loading="lazy"
+          />
+          <img
+            src="https://i.imgur.com/JOzOAbX.png"
+            alt="rainbow swirls"
+            width="1600"
+            height="1200"
+            loading="lazy"
+          />
+          <img
+            src="https://i.imgur.com/NGkoaif.png"
+            alt="an other worldly background of a field and a large tree"
+            width="768"
+            height="768"
+            loading="lazy"
+          />
+          <img
+            src="https://i.imgur.com/MlH8PEM.png"
+            alt="a younger looking girl with a missing thumb looking back at the viewer with their hand glowing with magic"
+            width="768"
+            height="768"
+            loading="lazy"
+          />
+        </section>
       </details>
     </main>
     <footer>
       contact:
       <a
         href="https://play.rust-lang.org/?gist=a733f2de776759d09fcb292e76f23e1e"
-        rel="nofollow"
+        rel="noreferrer nofollow"
         target="_blank"
         ><code>format!("{}@outlook.com", "brecert")</code></a
       >
