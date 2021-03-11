@@ -3,7 +3,7 @@
   <head>
     <title>brecert</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta property="og:title" content="brecert" />
     <meta property="og:url" content="https://bree.dev" />
@@ -14,10 +14,10 @@
     <meta property="og:image:alt" content="brecert" />
     <meta property="og:description" content="Hello!" />
     <meta property="og:site_name" content="ts, js, py, go, rs" />
-    
-    <link href="https://github.com/brecert" rel="me">
 
-    <style type="text/css">
+    <link href="https://github.com/brecert" rel="me" />
+
+    <style>
       :root {
         --color-blue: #0072c6;
         --font-normal: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
@@ -33,7 +33,7 @@
         color: #444;
 
         font-family: var(--font-normal);
-        font-size: 13px;
+        font-size: 14px;
 
         margin: 0 auto;
       }
@@ -61,10 +61,6 @@
 
       summary {
         padding: 5px 0;
-      }
-
-      section {
-        padding: 1rem;
       }
 
       img {
@@ -105,27 +101,38 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 15px;
       }
+
+      .flex {
+        display: flex;
+      }
+
+      .pad {
+        padding: 1rem;
+      }
+
+      .margin-left {
+        margin-left: 1rem;
+      }
     </style>
   </head>
   <body>
     <header>
-      <h1 style="display: flex">
-        I'm Bree.
-        <div style="display: flex; gap: 1rem; margin-left: auto">
-          <a
-            href="//github.com/brecert/"
-            rel="noreferrer nofollow"
-            target="_blank"
-            ><img
-              class="icon"
-              title="github"
-              src="https://api.iconify.design/simple-icons:github.svg"
-              width="48"
-              height="48"
-          /></a>
-        </div>
-      </h1>
-      <span title="lanuage I use">js, rs, ts, py, go</span>
+      <div class="flex">
+        <h1>I'm Bree.</h1>
+        <a
+          href="//github.com/brecert/"
+          rel="noreferrer nofollow"
+          style="align-self: center; margin-left: auto"
+          target="_blank"
+          ><img
+            class="icon"
+            title="github"
+            src="https://api.iconify.design/simple-icons:github.svg"
+            width="48"
+            height="48"
+        /></a>
+      </div>
+      <span title="languages I use">js, rs, ts, py, go</span>
     </header>
     <main>
       <p class="text-lg">
@@ -141,7 +148,7 @@
             >snowflake</a
           >
         </summary>
-        <section>
+        <div class="margin-left">
           <p>
             Currently snowflake is the idea and concept to apply
             <a
@@ -162,7 +169,7 @@
               target="_blank"
               >Set theory</a
             >, and various "newer" programming concepts in general such as
-            algerbraic effects, and various "older" programming concepts such as
+            algebraic effects, and various "older" programming concepts such as
             lambda calculus, self types, and different ideas from proof
             checkers.
           </p>
@@ -175,7 +182,7 @@
             In the past for a language jam, I implemented the parser and ast
             format for an earlier prototype of the language.
           </p>
-        </section>
+        </div>
       </details>
       <details>
         <summary>
@@ -187,7 +194,7 @@
             >nertivia</a
           >
         </summary>
-        <section>
+        <div class="margin-left">
           <p>Nertivia is a free open source chat client and server.</p>
           <p>
             I generally help by providing guidance on certain ideas and
@@ -201,18 +208,83 @@
             the parser, and a generic entity format that can later be used with
             bots.
           </p>
-        </section>
+        </div>
       </details>
       <!-- todo: update to a project I am happy with once I make one -->
       <details>
-        <summary>
-          I'm not particularly happy with any of my own projects right now...
-        </summary>
-        <section>:(</section>
+        <summary> I've made some projects and published them on github </summary>
+        <div class="margin-left">
+          <p>
+            I don't particularly feel that any of my projects are unique enough
+            or notable enough to be listed here in a way I can accept currently.
+          </p>
+          <p>
+            However, if I had to pick some to display I would likely point out
+          </p>
+          <section>
+            <h3>
+              <a
+                rel="noreferrer nofollow"
+                target="_blank"
+                href="https://github.com/Brecert/seeded-numbers"
+                >seeded-numbers</a
+              >
+            </h3>
+            <p>
+              A javascript library to generate seeded random numbers by using
+              the pcg32 algorithm.
+            </p>
+            <p>
+              There's nothing particularly special about this project, just that
+              it works as intended.
+            </p>
+          </section>
+          <section>
+            <h3>
+              <a
+                rel="noreferrer nofollow"
+                target="_blank"
+                href="https://github.com/Brecert/mc-utils"
+                >mc-utils</a
+              >
+            </h3>
+            <p>A command line tool for working with the minecraft api.</p>
+            <p>
+              I'm not particularly happy with the cleanliness of the code, but
+              it does the job and works how it's intended to.
+            </p>
+          </section>
+          <section>
+            <h3>
+              <a
+                rel="noreferrer nofollow"
+                target="_blank"
+                href="https://github.com/Brecert/esnext-utils"
+                >esnext-utils</a
+              >
+            </h3>
+            <p>
+              A javascript "runtime" and library built on top of node to support
+              future facing and non-standard features by using babel and its own
+              transformers such as the proposed
+              <a
+                rel="noreferrer nofollow"
+                target="_blank"
+                href="https://github.com/tc39/proposal-bind-operator"
+                >bind operator</a
+              >
+              and operator overloading.
+            </p>
+            <p>
+              This isn't a project anyone should really use, but it was fun to
+              make and the code quality is okayish to me.
+            </p>
+          </section>
+        </div>
       </details>
       <details>
-        <summary>I enjoy doodling and making art occasionally</summary>
-        <section class="grid pad">
+        <summary> I enjoy doodling and making art occasionally </summary>
+        <div class="grid pad">
           <!-- todo: use something other than imgur -->
           <img
             src="https://i.imgur.com/RBTJD5I.png"
@@ -256,7 +328,8 @@
             height="768"
             loading="lazy"
           />
-        </section>
+        </div>
+        <!-- todo: put an interactive frame that loads on mouse hover or something for doodle pad. "Draw here!" -->
       </details>
     </main>
     <footer>
