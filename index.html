@@ -20,18 +20,35 @@
 
     <style>
       :root {
-        --color-blue: #0072c6;
+        --foreground-color: #444;
+        --background-color: #fcfcfc;
+
+        --accent-color: #0072c6;
+
         --font-normal: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
         --font-light: "Segoe UI Light", var(--font-normal);
         --font-semi-light: "Segoe UI Semilight", var(--font-normal);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --foreground-color: rgb(200 200 200);
+          --background-color: rgb(33 33 36);
+          --accent-color: hsl(200, 70%, 60%);
+        }
+
+        .icon {
+          /* todo: replace this with a picture src-set selector */
+          filter: invert(1);
+        }
       }
 
       body {
         overflow: auto;
         max-width: 830px;
 
-        background-color: #fff;
-        color: #444;
+        background-color: var(--background-color);
+        color: var(--foreground-color);
 
         font-family: var(--font-normal);
         font-size: 14px;
@@ -79,8 +96,8 @@
       }
 
       a,
-      .text-blue {
-        color: var(--color-blue);
+      .text-accent {
+        color: var(--accent-color);
       }
 
       .text-lg {
