@@ -30,17 +30,33 @@
         --font-semi-light: "Segoe UI Semilight", var(--font-normal);
       }
 
-      @media (prefers-color-scheme: dark) {
-        :root {
+      @media (prefers-color-scheme: light) {
+        :root.invert {
           --foreground-color: rgb(200 200 200);
           --background-color: rgb(33 33 36);
           --accent-color: hsl(200, 70%, 60%);
         }
 
-        .icon {
+        :root.invert .icon {
+          filter: invert(1);
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not(.invert) {
+          --foreground-color: rgb(200 200 200);
+          --background-color: rgb(33 33 36);
+          --accent-color: hsl(200, 70%, 60%);
+        }
+
+        :root:not(.invert) .icon {
           /* todo: replace this with a picture src-set selector */
           filter: invert(1);
         }
+      }
+
+      * {
+        transition: color 0.05s, background-color 0.15s;
       }
 
       body {
@@ -108,20 +124,17 @@
       .icon {
         width: 2rem;
         height: 2rem;
+        transition: filter 0.15s;
       }
 
       .right {
         float: right;
       }
 
-      .grid {
+      .image-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 15px;
-      }
-
-      .flex {
-        display: flex;
       }
 
       .pad {
@@ -131,31 +144,64 @@
       .margin-left {
         margin-left: 1rem;
       }
+
+      /* Actual layout data */
+
+      header {
+        display: grid;
+        grid: [title] min-content [info] min-content / 1fr auto;
+        align-items: center;
+      }
+    </style>
+    <script>
+      const rootClassList = document.documentElement.classList;
+
+      const setInversion = (inverted) => {
+        inverted ? rootClassList.add("invert") : rootClassList.remove("invert");
+      };
+
+      rootClassList.add("scripting-enabled");
+    </script>
+    <style>
+      :root:not(.scripting-enabled) .noscript-hidden {
+        visibility: hidden;
+      }
     </style>
   </head>
   <body>
     <header>
-      <div class="flex">
-        <h1>I'm Bree.</h1>
-        <a
-          href="//github.com/brecert/"
-          rel="noreferrer nofollow"
-          style="align-self: center; margin-left: auto"
-          target="_blank"
-          ><img
-            class="icon"
-            title="github"
-            src="https://api.iconify.design/simple-icons:github.svg"
-            width="48"
-            height="48"
-        /></a>
-      </div>
+      <h1>I'm Bree.</h1>
+
+      <a
+        href="https://github.com/brecert/"
+        rel="noreferrer nofollow"
+        target="_blank"
+        style="display: flex; justify-content: flex-end"
+        ><img
+          class="icon"
+          title="github"
+          src="https://api.iconify.design/simple-icons:github.svg"
+          width="48"
+          height="48"
+      /></a>
       <span title="languages I use">
         <abbr title="typescript">ts</abbr>, <abbr title="rust">rs</abbr>,
         <abbr title="ruby">rb</abbr>, <abbr title="javascript">js</abbr>,
         <abbr title="python">py</abbr>,
         <abbr title="the go programming language">go</abbr>
       </span>
+      <label class="noscript-hidden">
+        invert theme
+        <input
+          id="$inverted"
+          type="checkbox"
+          oninput="setInversion(this.checked)"
+          checked="false"
+        />
+        <script>
+          setInversion($inverted.checked);
+        </script>
+      </label>
     </header>
     <main>
       <p class="text-lg">
@@ -307,7 +353,7 @@
       </details>
       <details>
         <summary>I enjoy doodling and making art occasionally</summary>
-        <div class="grid pad">
+        <div class="image-grid pad">
           <!-- todo: use something other than imgur -->
           <img
             src="https://i.imgur.com/RBTJD5I.png"
@@ -331,7 +377,7 @@
             loading="lazy"
           />
           <img
-            style="background-color: white;"
+            style="background-color: white"
             src="https://i.imgur.com/svkmPkB.png"
             alt="a flatly shaded drawing of a shocked purple haired girl"
             width="768"
