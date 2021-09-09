@@ -15,8 +15,8 @@
     <meta property="og:image:alt" content="brecert" />
     <meta property="og:description" content="Hello!" />
     <meta property="og:site_name" content="ts, rs, rb, js, py, go" />
-    
-    <meta name="theme-color" content="#cd5fe8" >
+
+    <meta name="theme-color" content="#cd5fe8" />
 
     <link href="https://github.com/brecert" rel="me" />
 
@@ -161,14 +161,14 @@
       const setInversion = (inverted) => {
         inverted ? rootClassList.add("invert") : rootClassList.remove("invert");
       };
-
-      rootClassList.add("scripting-enabled");
     </script>
-    <style>
-      :root:not(.scripting-enabled) .noscript-hidden {
-        visibility: hidden;
-      }
-    </style>
+    <noscript>
+      <style>
+        .noscript-hidden {
+          visibility: hidden;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <header>
