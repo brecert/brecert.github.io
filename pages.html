@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>bree's pages.html</title>
+  <style>
+    :root {
+      font-family: monospace;
+      --fgc: #222;
+      --bgc: #fcfcfc;
+      --acc: #0072c6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bgc: #212124;
+        --fgc: #fcfcfc;
+        --acc: #52b1e0;
+      }
+    }
+
+    body {
+      color: var(--fgc);
+      background-color: var(--bgc);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--acc);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      margin-bottom: 1em;
+    }
+  </style>
+  <h1>pages.html</h1>
+  <p>a list of some of my pages or projects</p>
+  <aside>page sizes may fluctuate or change</aside>
+  <dl>
+    <dt><a href="https://bree.dev/">home</a> (~7kb gzipped)</dt>
+    <dd>my home page!</dd>
+
+    <dt><a href="https://bree.dev/typechart/">typechart</a> (~31kb gzipped)</dt>
+    <dd>a Pokémon type chart for generations VI+</dd>
+
+    <dt>
+      <a href="https://bree.dev/discord-quote-generator/">
+        discord quote generator
+      </a>
+      (~131kb gzipped)
+    </dt>
+    <dd>
+      generate quotes in the style of discord's "Imagine a place" promotional
+      images.
+    </dd>
+
+    <dt>
+      <a href="https://bree.dev/horse/"
+        >hooooooooooooooooooooooooooooooooooooooooooooooooooooooooorse</a
+      >
+      (~3kb gzipped)
+    </dt>
+    <dd>
+      a very long (endless) horse, inspired by
+      <a href="https://secure.endless.horse/">endless.horse</a> after noticing
+      it could be implemented in a very simple way.
+    </dd>
+  </dl>
+</html>
