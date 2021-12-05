@@ -147,6 +147,11 @@
         margin-left: 1rem;
       }
 
+      .inline-flex {
+        display: flex;
+        place-content: center;
+      }
+
       /* Actual layout data */
 
       header {
@@ -192,7 +197,7 @@
         <abbr title="python">py</abbr>,
         <abbr title="the go programming language">go</abbr>
       </span>
-      <label class="noscript-hidden">
+      <label class="noscript-hidden inline-flex">
         invert theme
         <input
           id="$inverted"
