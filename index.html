@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <title>brecert</title>
     <meta charset="utf-8" />
+
+    <title>bree's homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Description" content="Hello, I'm bree!" />
 
@@ -23,8 +24,9 @@
 
     <style>
       :root {
-        --foreground-color: #444;
-        --background-color: #fcfcfc;
+        --fg-color: #444;
+        --fg-color-emphasis: #000;
+        --bg-color: #fcfcfc;
 
         --accent-color: #0072c6;
 
@@ -35,39 +37,37 @@
 
       @media (prefers-color-scheme: light) {
         :root.invert {
-          --foreground-color: rgb(200 200 200);
-          --background-color: rgb(33 33 36);
+          --fg-color: rgb(200 200 200);
+          --bg-color: rgb(33 33 36);
           --accent-color: hsl(200, 70%, 60%);
-        }
-
-        :root.invert .icon {
-          filter: invert(1);
         }
       }
 
       @media (prefers-color-scheme: dark) {
         :root:not(.invert) {
-          --foreground-color: rgb(200 200 200);
-          --background-color: rgb(33 33 36);
+          --fg-color: rgb(200 200 200);
+          --fg-color-emphasis: #fff;
+          --bg-color: rgb(33 33 36);
           --accent-color: hsl(200, 70%, 60%);
-        }
-
-        :root:not(.invert) .icon {
-          /* todo: replace this with a picture src-set selector */
-          filter: invert(1);
         }
       }
 
+      /* for when the theme changes */
       * {
         transition: color 0.05s, background-color 0.15s;
+      }
+
+      /* prevent layout shifting when details are expanded */
+      html {
+        scrollbar-gutter: stable both-edges;
       }
 
       body {
         overflow: auto;
         max-width: 830px;
 
-        background-color: var(--background-color);
-        color: var(--foreground-color);
+        background-color: var(--bg-color);
+        color: var(--fg-color);
 
         font-family: var(--font-normal);
         font-size: 14px;
@@ -77,7 +77,7 @@
 
       @media screen and (max-width: 930px) {
         body {
-          margin: 0 5vh;
+          margin: 0 10vw;
         }
       }
 
@@ -94,6 +94,14 @@
         font-family: var(--font-light);
         font-size: 2.77em;
         font-weight: 200;
+      }
+
+      h2 {
+        font-size: 1.46em;
+        font-family: var(--font-semi-light);
+        font-weight: 400;
+
+        margin: 1.2rem 0;
       }
 
       summary {
@@ -119,15 +127,17 @@
         color: var(--accent-color);
       }
 
-      .text-lg {
-        font-size: 1.46em;
-        font-family: var(--font-semi-light);
+      .icon {
+        display: inline-block;
+        fill: currentColor;
       }
 
-      .icon {
-        width: 2rem;
-        height: 2rem;
-        transition: filter 0.15s;
+      a.icon {
+        color: var(--fg-color);
+      }
+
+      a.icon:hover {
+        color: var(--fg-color-emphasis);
       }
 
       .right {
@@ -181,17 +191,18 @@
       <h1>I'm Bree.</h1>
 
       <a
+        class="icon"
         href="https://github.com/brecert/"
         rel="noreferrer nofollow"
         target="_blank"
-        style="display: flex; justify-content: flex-end"
+        style="display: flex; justify-self: end"
       >
         <!-- taken from: https://github.com/simple-icons/simple-icons/blob/develop/icons/github.svg?short_path=538ec5b -->
         <svg
           class="icon"
           role="img"
-          width="48"
-          height="48"
+          width="32"
+          height="32"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -201,14 +212,18 @@
           />
         </svg>
       </a>
-      <span title="languages I use">
-        <abbr title="typescript">ts</abbr>, <abbr title="rust">rs</abbr>,
-        <abbr title="ruby">rb</abbr>, <abbr title="javascript">js</abbr>,
-        <abbr title="python">py</abbr>,
-        <abbr title="the go programming language">go</abbr>
+      <!-- todo: this should probably be a proper list of some sort -->
+      <span aria-label="languages I use" role="list">
+        <abbr title="typescript" role="listitem">ts</abbr>,
+        <abbr title="rust" role="listitem">rs</abbr>,
+        <abbr title="ruby" role="listitem">rb</abbr>,
+        <abbr title="javascript" role="listitem">js</abbr>,
+        <abbr title="python" role="listitem">py</abbr>,
+        <abbr title="the go programming language" role="listitem">go</abbr>
       </span>
+      <!-- I could do this with CSS only, but I'm not sure if it'd be worth it. -->
       <label class="noscript-hidden inline-flex">
-        invert theme
+        invert color scheme
         <input
           id="$inverted"
           type="checkbox"
@@ -220,12 +235,22 @@
       </label>
     </header>
     <main>
-      <p class="text-lg">
-        Hello! I'm bree. I usually program in javascript and rust...
+      <h2 class="h2">
+        Hello! I'm bree. I usually program with javascript and rust...
+      </h2>
+      <p>
+        If you have any suggestions, questions, or know how to improve the accessibility for
+        this site please let me know by
+        <a
+          href="https://github.com/brecert/brecert.github.io/issues/new"
+          rel="noreferrer nofollow"
+          target="_blank"
+          >creating an issue</a
+        >.
       </p>
       <!-- todo: update to a project I am happy with once I make one -->
       <details>
-        <summary>I've published some projects</summary>
+        <summary>Some projects</summary>
         <div class="margin-left">
           <p>
             I don't particularly feel that any of my projects are unique enough
@@ -313,11 +338,13 @@
               features.
             </p>
           </section>
-          <h3><a href="./pages.html">and others...</a></h3>
+          <h3>
+            <a href="./pages.html">and various others...</a>
+          </h3>
         </div>
       </details>
       <details>
-        <summary>I enjoy doodling and making art occasionally</summary>
+        <summary>Some doodles</summary>
         <div class="image-grid pad">
           <!-- todo: use something other than imgur -->
           <img
@@ -369,12 +396,14 @@
     </main>
     <footer>
       contact:
-      <a
-        href="https://play.rust-lang.org/?gist=a733f2de776759d09fcb292e76f23e1e"
-        rel="noreferrer nofollow"
-        target="_blank"
-        ><code>format!("{}@outlook.com", "brecert")</code></a
-      >
+      <address style="display: inline">
+        <a
+          href="https://play.rust-lang.org/?gist=a733f2de776759d09fcb292e76f23e1e"
+          rel="noreferrer nofollow"
+          target="_blank"
+          ><code>format!("{}@outlook.com", "brecert")</code></a
+        >
+      </address>
     </footer>
   </body>
 </html>
