@@ -1,0 +1,20 @@
+<svg
+  aria-hidden="true"
+  viewBox="0 0 256 256"
+  width="256"
+  height="256"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    text {
+      text-anchor: middle;
+      dominant-baseline: middle;
+      transform-origin: center;
+      opacity: 0.05;
+      font-size: xx-large;
+      font-family: system-ui;
+    }
+  </style>
+  <text x="50%" y="45%" transform="rotate(45)">This space is</text>
+  <text x="50%" dy="10%" y="45%" transform="rotate(45)">intentionally left blank</text>
+</svg>
