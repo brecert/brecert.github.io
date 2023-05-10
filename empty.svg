@@ -9,12 +9,17 @@
     text {
       text-anchor: middle;
       dominant-baseline: middle;
-      transform-origin: center;
       opacity: 0.05;
       font-size: xx-large;
       font-family: system-ui;
     }
+    g {
+      transform-origin: center;
+      transform: rotate(45deg) translate(50%, 45%);
+    }
   </style>
-  <text x="50%" y="45%" transform="rotate(45)">This space is</text>
-  <text x="50%" dy="10%" y="45%" transform="rotate(45)">intentionally left blank</text>
+  <g>
+    <text>This space is</text>
+    <text dy="10%">intentionally left blank</text>
+  </g>
 </svg>
