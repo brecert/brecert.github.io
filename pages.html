@@ -93,5 +93,19 @@
       and wanting to make a very small and lightweight clone with a dependency
       on jquery or anything like that.
     </dd>
+
+    <dt>
+      <a href="tower-unite-laser-expression-simulator">tower unite laser projector simulator</a>
+      (~45kb gzipped)
+    </dt>
+    <dd>
+      <p>A simulator for <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1136940994">Tower Unite's laser expressions</a>.</p>
+      <p>The parser uses parser-lang, this made writing the parser pretty easy and only took an hour or so. Most of the time was spent verifying behavior between Tower Unite and my parser.</p>
+      <p>I wrote a basic ast node based interpreter, but it wasn't very efficient so I wrote a bytecode compiler and interpreter and the significantly improved things. Even still, I still wanted better performance and so I wrote a bytecode interpreter in assemblyscript.</p>
+      <p>Unfortunately, most of the transferred size is from the wasm binary generated from assemblyscript.</p>
+      <p>The actual projector output is a simple canvas 2d renderer.</p>
+      <p>If I come back to this in the future, I'd like to transpile the language to a gpu shader, handwrite the parser, and improve the wasm binary size.</p>
+      <p>Most of the interpreter's logic is pretty simple, it's just a bit tedious to write by hand. So making a small language similar to walt for generating a smaller wasm binary might be beneficial.</p>
+    </dd>
   </dl>
 </html>
